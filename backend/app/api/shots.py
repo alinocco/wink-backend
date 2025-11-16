@@ -102,7 +102,6 @@ async def create_shot(
     db_shot = Shot(
         order=shot_create.order,
         text=shot_create.text,
-        image=shot_create.image,
         prompt=shot_create.prompt,
         negative_prompt=shot_create.negative_prompt,
         params=shot_create.params,
@@ -119,7 +118,6 @@ async def create_shot(
         version_number=1,
         order=db_shot.order,
         text=db_shot.text,
-        image=db_shot.image,
         prompt=db_shot.prompt,
         negative_prompt=db_shot.negative_prompt,
         params=db_shot.params,
@@ -166,7 +164,6 @@ async def update_shot(
     # Сохраняем старые значения для создания версии
     old_order = shot.order
     old_text = shot.text
-    old_image = shot.image
     old_prompt = shot.prompt
     old_negative_prompt = shot.negative_prompt
     old_params = shot.params
@@ -178,9 +175,6 @@ async def update_shot(
         has_changes = True
     if shot_update.text is not None and shot_update.text != shot.text:
         shot.text = shot_update.text
-        has_changes = True
-    if shot_update.image is not None and shot_update.image != shot.image:
-        shot.image = shot_update.image
         has_changes = True
     if shot_update.prompt is not None and shot_update.prompt != shot.prompt:
         shot.prompt = shot_update.prompt
@@ -220,7 +214,6 @@ async def update_shot(
             version_number=next_version,
             order=shot.order,
             text=shot.text,
-            image=shot.image,
             prompt=shot.prompt,
             negative_prompt=shot.negative_prompt,
             params=shot.params,
@@ -450,7 +443,6 @@ async def create_shot_version(
         version_number=next_version,
         order=shot.order,
         text=shot.text,
-        image=shot.image,
         prompt=shot.prompt,
         negative_prompt=shot.negative_prompt,
         params=shot.params,
@@ -524,7 +516,6 @@ async def set_current_version(
     # Восстанавливаем значения из версии в shot
     shot.order = version.order
     shot.text = version.text
-    shot.image = version.image
     shot.prompt = version.prompt
     shot.negative_prompt = version.negative_prompt
     shot.params = version.params

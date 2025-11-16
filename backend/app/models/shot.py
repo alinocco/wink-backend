@@ -9,7 +9,9 @@ class Shot(Base):
     id = Column(Integer, primary_key=True, index=True)
     order = Column(Integer, nullable=False, index=True)
     text = Column(String, nullable=True)
-    image = Column(String, nullable=True)  # Path to locally saved image
+    sketch_image = Column(String, nullable=True)
+    middle_image = Column(String, nullable=True)
+    final_image = Column(String, nullable=True)
     prompt = Column(String, nullable=True)
     negative_prompt = Column(String, nullable=True)
     params = Column(JSON, nullable=True)

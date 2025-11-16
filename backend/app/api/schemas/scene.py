@@ -7,7 +7,9 @@ class ShotResponse(BaseModel):
     id: int
     order: int
     text: Optional[str] = None
-    image: Optional[str] = None
+    sketch_image: Optional[str] = None
+    middle_image: Optional[str] = None
+    final_image: Optional[str] = None
     prompt: Optional[str] = None
     negative_prompt: Optional[str] = None
     params: Optional[Dict[str, Any]] = None
@@ -23,7 +25,9 @@ class ShotResponse(BaseModel):
 class ShotCreate(BaseModel):
     order: int
     text: Optional[str] = None
-    image: Optional[str] = None
+    sketch_image: Optional[str] = None
+    middle_image: Optional[str] = None
+    final_image: Optional[str] = None
     prompt: Optional[str] = None
     negative_prompt: Optional[str] = None
     params: Optional[Dict[str, Any]] = None
@@ -33,7 +37,9 @@ class ShotCreate(BaseModel):
 class ShotUpdate(BaseModel):
     order: Optional[int] = None
     text: Optional[str] = None
-    image: Optional[str] = None
+    sketch_image: Optional[str] = None
+    middle_image: Optional[str] = None
+    final_image: Optional[str] = None
     prompt: Optional[str] = None
     negative_prompt: Optional[str] = None
     params: Optional[Dict[str, Any]] = None
@@ -46,7 +52,9 @@ class ShotVersionResponse(BaseModel):
     version_number: int
     order: int
     text: Optional[str] = None
-    image: Optional[str] = None
+    sketch_image: Optional[str] = None
+    middle_image: Optional[str] = None
+    final_image: Optional[str] = None
     prompt: Optional[str] = None
     negative_prompt: Optional[str] = None
     params: Optional[Dict[str, Any]] = None

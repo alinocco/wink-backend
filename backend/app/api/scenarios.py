@@ -337,7 +337,6 @@ async def export_scenario(
                 id=shot.id,
                 order=shot.order,
                 text=shot.text,
-                image=shot.image,
                 prompt=shot.prompt,
                 negative_prompt=shot.negative_prompt,
                 params=shot.params,
