@@ -1,0 +1,38 @@
+.btn {
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Градиентные кнопки в стиле UploadScreen */
+.btn.primary {
+    background: linear-gradient(90deg, #00c9ff, #92fe9d);
+    color: #0a0a0a;
+}
+.btn.primary:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.btn.danger {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: #fff;
+}
+.btn.danger:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.btn.secondary {
+    background: linear-gradient(90deg, #6c757d, #495057);
+    color: #fff;
+}
+.btn.secondary:hover {
+    filter: brightness(1.1);
+    transform: scale(1.03);
+}
